@@ -7,8 +7,8 @@ class RelationshipsController < ApplicationController
   end
   # フォロワー一覧
   def followers
-    user=User.find(params[:user_id])
-    @users=user.followers
+    @user=User.find(params[:user_id])
+    @users=@user.followers
   end
   # フォローするとき
   def create
